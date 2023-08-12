@@ -1,0 +1,11 @@
+services:
+  app-abil:
+    build: .
+    container_name: ct-apps-abil
+    ports:
+      - "80:3000"
+    image: "azmitsabitul/app-abil"
+    volumes:
+      - vol-apps:/app/public/images/
+volumes:
+  vol-apps:
