@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Scanning Code') {
             steps {
-                echo 'Scanning Code'
+                sh '''sonar-scanner   -Dsonar.projectKey=training-devops   -Dsonar.sources=.   -Dsonar.host.url=http://10.23.2.2:9000   -Dsonar.login=sqp_b6c238d0265878cd9b8da127a7be64c0f14bd138'''
             }
         }
         stage('Build Image') {
