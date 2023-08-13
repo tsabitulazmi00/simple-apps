@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build apps') {
             steps {
-                sh 'npm build'
+                sh 'npm install'
             }
         }
         stage('Testing') {
